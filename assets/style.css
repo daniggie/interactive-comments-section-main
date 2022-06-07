@@ -1,0 +1,203 @@
+* {
+    box-sizing: border-box;
+    transition: .5s;
+}
+
+:root {
+    --blue: hsl(238, 40%, 52%);
+    --soft-red: hsl(358, 79%, 66%);
+    --light-blue: hsl(239, 57%, 85%);
+    --pale-red: hsl(357, 100%, 86%);
+    --dark-blue: hsl(212, 24%, 26%);
+    --grayish-blue: hsl(211, 10%, 45%);
+    --light-gray: hsl(223, 19%, 93%);
+    --very-light-gray: hsl(228, 33%, 97%);
+    --white: hsl(0, 0%, 100%);
+}
+
+body {
+    width: 100%;
+    margin: 0;
+    background: var(--very-light-gray);
+}
+
+main {
+    margin: 5vh 0 5vh 0;
+    position: relative;
+}
+
+.mycomment__card,.comment__card{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    min-width: 490px;
+}
+
+.comment__card-header .btn {
+    border: none !important;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-width: 10%;
+}
+
+.mycomment__card-body .btn {
+    border: none !important;
+    color: var(--white);
+    background-color: var(--blue);
+    padding: 0rem;
+    font-weight: 500;
+    width: 15%;
+    height: 30px;
+    min-width: 10%;
+}
+
+button{
+    padding: 0;
+}
+
+button:hover {
+    opacity: .6;
+}
+
+small,
+b,
+h6 {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+small {
+    color: var(--grayish-blue);
+}
+
+h6,
+.selector b {
+    margin: .5rem !important;
+    color: var(--blue);
+}
+
+.delete{
+    color: var(--soft-red) !important;
+}
+
+.selector b {
+    font-size: large;
+}
+
+p{
+    font-size: 14px;
+    width: 95%;
+}
+
+.selector i:hover{
+    color: var(--blue) !important;
+}
+
+.selector i{
+    color: var(--light-blue) !important;
+    cursor: pointer;
+}
+
+.comment__card-body b {
+    color: black;
+}
+
+.mycomment__card-body,.comment__card-body {
+    color: var(--grayish-blue);
+    width: 90%;
+}
+
+.mycomment__card-body img{
+    width: 50px;
+    max-height: 50px;
+}
+
+.mycomment__card-body{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: start;
+
+}
+
+.card-you{
+    background-color: var(--blue);
+    color:white;
+    padding-bottom: 3px;
+    font-weight: 500;
+    font-size: 12px;
+    border-radius: .2em;
+    display: flex;
+    width: 30px;
+    align-items: center;
+    justify-content: center;
+}
+
+.comment__card-profile img {
+    width: 30px;
+}
+
+
+.selector {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 5%;
+    min-width: 30px;
+    padding: .6rem;
+    background-color: var(--very-light-gray);
+    border-radius: .5rem;
+    max-height: 110px;
+}
+
+.comment__card-profile,
+.comment__card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-width: 30%;
+}
+
+.comment__card-profile {
+    gap: 10px;
+}
+
+.reply__container {
+    position: relative;
+}
+
+
+textarea{
+    resize: none;
+    height: 90px;
+    font-size: 10pt;
+    width: 60%;
+    border-color: var(--light-gray);
+    border-radius: .3rem;
+    padding: .5rem 0 0 1.5rem;
+}
+
+.reply__container::before {
+    position: absolute;
+    background-color: var(--grayish-blue);
+    content: "";
+    min-height: 100%;
+    opacity: .1;
+    width: 2px;
+    left: -30px;
+}
+
+.reply__container,
+.comment__container:not(:first-child) {
+    margin-left: 3rem;
+    margin-top: 1rem;
+}
+
+.mycomment__card, .comment__card {
+    padding: 20px;
+    background-color: var(--white);
+    border-radius: .3rem;
+    margin-bottom: 1rem;
+}
